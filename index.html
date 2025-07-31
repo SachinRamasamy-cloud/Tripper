@@ -30,6 +30,7 @@
         }
     </style>
 
+
 </head>
 
 <body class="font-sans">
@@ -42,7 +43,7 @@
             </div>
             <div class="hidden md:flex space-xExample 8">
                 <a href="#home" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Home</a>
-                <a href="#destinations" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Destinations</a>
+                <a href="#destination" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Destinations</a>
                 <a href="#packages" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Packages</a>
                 <a href="#testimonials" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Testimonials</a>
                 <a href="#blog" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Blog</a>
@@ -70,9 +71,9 @@
             <p class="text-3xl md:text-2xl mb-4"> Explore the world's most beautiful destinations with our expertly
                 curated travel packages</p>
             <a href="detials.html"
-                    class="gradient-bg hover:opacity-90 text-white font-bold px-4 py-3 mt-2 rounded-lg transition duration-300 transform hover:scale-105 inline-block">
-                    Start Exploreing
-                </a>
+                class="gradient-bg hover:opacity-90 text-white font-bold px-4 py-3 mt-2 rounded-lg transition duration-300 transform hover:scale-105 inline-block">
+                Start Exploreing
+            </a>
         </div>
     </section>
     <div class="container mx-auto px-6 py-6 -mt-16 relative z-20">
@@ -299,12 +300,23 @@
                 destinations around the globel</p>
         </div>
         <div class="bg-white rounded-lg mb-4 p-6">
-            <div class="mt-4 flex justify-between items-center">
-                <h1 class="text-3xl font-bold font-awesome mb-6">Best Selling Destination</h1>
-                <button class="right-4 px-4 py-2 text-white font-sans w-[150px] mb-6 bg-blue-600 rounded-lg ">View
-                    more</button>
+            <div class="bg-white rounded-lg p-6">
+                <div class="mt-4 flex justify-between items-center">
+                    <h1 class="text-xl sm:text-2xl md:text-3xl font-bold font-awesome">
+                        Best Selling Destination
+                    </h1>
+                    <!-- Arrow icons, hidden on small screens -->
+                    <div class="hidden sm:flex space-x-4 mb-6">
+                        <!-- Left arrow -->
+                        <i onclick="scrollLeft1('scrollContainer1')"
+                            class="fas fa-chevron-left text-blue-600 text-2xl cursor-pointer hover:text-red-600 transition duration-300"></i>
+                        <!-- Right arrow -->
+                        <i
+                            class="fas fa-chevron-right text-blue-600 text-2xl cursor-pointer hover:text-red-600 transition duration-300" onclick="scrollRight('scrollContainer1')"></i>
+                    </div>
+                </div>
             </div>
-            <div class="overflow-x-auto whitespace-nowrap">
+            <div id="scrollContainer1" class="overflow-x-auto whitespace-nowrap custom-scrollbar-hide">
                 <div
                     class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-4">
                     <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/1328/Stunning%20Sinquerim%20Beach.jpg?crop=134:207&downsize=134:207"
@@ -397,13 +409,25 @@
                 </div>
             </div>
         </div>
-        <div class="bg-white rounded-lg  p-6">
-            <div class="mt-4 flex justify-between items-center">
-                <h1 class="text-3xl font-bold font-awesome mb-6">Book Now @ 1: Lock your Holiday Package Price </h1>
-                <button class="right-4 px-4 py-2 text-white font-sans w-[150px] mb-6 bg-blue-600 rounded-lg ">View
-                    more</button>
+        <div class="bg-white rounded-lg mb-4 p-6">
+            <div class="bg-white rounded-lg p-6">
+                <div class="mt-4 flex justify-between items-center">
+                    <h1 class="text-xl sm:text-2xl md:text-3xl font-bold font-awesome ">
+                        Book Now @ 1: Lock your Holiday Package Price
+                    </h1>
+
+                    <!-- Arrow icons, hidden on small screens -->
+                   <div class="hidden sm:flex space-x-4 mb-6">
+                        <!-- Left arrow -->
+                        <i onclick="scrollLeft1('scrollContainer2')"
+                            class="fas fa-chevron-left text-blue-600 text-2xl cursor-pointer hover:text-red-600 transition duration-300"></i>
+                        <!-- Right arrow -->
+                        <i
+                            class="fas fa-chevron-right text-blue-600 text-2xl cursor-pointer hover:text-red-600 transition duration-300" onclick="scrollRight('scrollContainer2')"></i>
+                    </div>
+                </div>
             </div>
-            <div class="overflow-x-auto whitespace-nowrap custom-scrollbar-hide">
+            <div class="custom-scrollbar-hide overflow-x-auto whitespace-nowrap" id="scrollContainer2">
                 <div
                     class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-4">
                     <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/1328/Stunning%20Sinquerim%20Beach.jpg?crop=134:207&downsize=134:207"
@@ -496,7 +520,39 @@
                 </div>
             </div>
         </div>
+
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const scrollAmount = 300;
+
+        function scrollLeft1(containerId) {
+            const container = document.getElementById(containerId);
+            container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        }
+
+        function scrollRight(containerId) {
+            const container = document.getElementById(containerId);
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+    </script>
+
+
 </body>
 
 </html>
