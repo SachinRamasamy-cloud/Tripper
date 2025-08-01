@@ -41,27 +41,41 @@
                 <i class="fas fa-plane-departure text-2xl"></i>
                 <span class="font-bold text-xl">Tripper</span>
             </div>
-            <div class="hidden md:flex space-xExample 8">
-                <a href="#home" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Home</a>
-                <a href="#destination" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Destinations</a>
-                <a href="#packages" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Packages</a>
-                <a href="#testimonials" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Testimonials</a>
-                <a href="#blog" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Blog</a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-4">
+                <a href="#Home" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Home</a>
+                <a href="destination.html" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Destinations</a>
+                <a href="packages.html" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Packages</a>
+                <a href="testimonials.html" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Testimonials</a>
+                <a href="blog.html" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Blog</a>
                 <a href="#contact" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Contact</a>
                 <a href="login.html"
                     class="login-bg hover:opacity-90 text-white font-bold px-3 py-2 ml-2 rounded-lg transition duration-300 transform hover:scale-105 inline-block">
-                    Login
-                </a>
-
-
+                    Login</a>
             </div>
-            <button class="md:hidden focus:outline-none">
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
                 <i class="fas fa-bars text-xl"></i>
             </button>
         </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden text-center flex flex-col space-y-2 px-6 py-3 bg-blue-800">
+            <a href="#home" class="inline-block px-3 py-2 hover:bg-blue-600 rounded-lg">Home</a>
+            <a href="destination.html" class="inline-block px-3 py-2 hover:bg-blue-600 rounded-lg">Destinations</a>
+            <a href="packages.html" class="inline-block px-3 py-2 hover:bg-blue-600 rounded-lg">Packages</a>
+            <a href="testimonials.html" class="inline-block px-3 py-2 hover:bg-blue-600 rounded-lg">Testimonials</a>
+            <a href="blog.html" class="inline-block px-3 py-2 hover:bg-blue-600 rounded-lg">Blog</a>
+            <a href="#contact" class="inline-block px-3 py-2 hover:bg-blue-600 rounded-lg">Contact</a>
+            <a href="login.html" class="inline-block bg-blue-600 text-white rounded-lg px-3 py-2 font-bold">Login</a>
+        </div>
+
     </nav>
+
     <!--Hero-->
-    <section class="relative h-screen flex items-center justify-center text-white text-center">
+    <section id="Home" class="relative h-screen flex items-center justify-center text-white text-center">
         <div class="absolute bg-black opacity-40"></div>
         <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/353db2ac-c5a1-4579-af05-26ab5b666fe9.png"
             alt="Panoramic view of tropical beach with palm trees and turquoise water at sunset"
@@ -299,10 +313,11 @@
             <p class="text-center max-w-2xl mx-auto text-gray-500 mt-2 mb-6">Explore our most sought-after travel
                 destinations around the globel</p>
         </div>
-        <div class="bg-white rounded-lg mb-4 sm:p-2 md:p-4 lg:p-6">
-            <div class="bg-white rounded-lg p-6">
+        <!--card 1-->
+        <div class="bg-white rounded-lg mb-4 px-6 py-6">
+            <div class="bg-white rounded-lg p-3">
                 <div class="mt-4 flex justify-between items-center">
-                    <h1 class="text-xl sm:text-2xl md:text-3xl font-bold font-awesome">
+                    <h1 class="text-2xl font-bold font-awesome">
                         Best Selling Destination
                     </h1>
                     <!-- Arrow icons, hidden on small screens -->
@@ -311,14 +326,14 @@
                         <i onclick="scrollLeft1('scrollContainer1')"
                             class="fas fa-chevron-left text-blue-600 text-2xl cursor-pointer hover:text-red-600 transition duration-300"></i>
                         <!-- Right arrow -->
-                        <i
-                            class="fas fa-chevron-right text-blue-600 text-2xl cursor-pointer hover:text-red-600 transition duration-300" onclick="scrollRight('scrollContainer1')"></i>
+                        <i class="fas fa-chevron-right text-blue-600 text-2xl cursor-pointer hover:text-red-600 transition duration-300"
+                            onclick="scrollRight('scrollContainer1')"></i>
                     </div>
                 </div>
             </div>
             <div id="scrollContainer1" class="overflow-x-auto whitespace-nowrap custom-scrollbar-hide">
                 <div
-                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-4">
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2">
                     <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/1328/Stunning%20Sinquerim%20Beach.jpg?crop=134:207&downsize=134:207"
                         class="rounded-lg w-full h-full object-cover" alt="">
                     <div
@@ -328,7 +343,7 @@
                         Goa</div>
                 </div>
                 <div
-                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-4">
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2">
                     <img src="https://images.unsplash.com/photo-1585765687665-427ec8513a7b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z3VqYXJhdHxlbnwwfHwwfHx8MA%3D%3D"
                         class="rounded-lg w-full h-full object-cover" alt="">
                     <div
@@ -338,7 +353,7 @@
                         Gujarat</div>
                 </div>
                 <div
-                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-4">
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2">
                     <img src="https://images.unsplash.com/photo-1566915682737-3e97a7eed93b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRhbWlsJTIwbmFkdXxlbnwwfHwwfHx8MA%3D%3D"
                         class="rounded-lg w-full h-full object-cover" alt="">
                     <div
@@ -348,7 +363,7 @@
                         Tamil Nadu</div>
                 </div>
                 <div
-                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-4">
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2">
                     <img src="https://images.unsplash.com/photo-1583513645242-25a32d451084?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8a2VyYWxhfGVufDB8fDB8fHww"
                         class="rounded-lg w-full h-full object-cover" alt="">
                     <div
@@ -358,7 +373,7 @@
                         Kerala</div>
                 </div>
                 <div
-                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-4">
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2">
                     <img src="https://images.unsplash.com/photo-1715457573748-8e8a70b2c1be?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8a2FzaG1pcnxlbnwwfHwwfHx8MA%3D%3D"
                         class="rounded-lg w-full h-full object-cover" alt="">
                     <div
@@ -368,7 +383,7 @@
                         Kashmir</div>
                 </div>
                 <div
-                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-4">
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2">
                     <img src="https://plus.unsplash.com/premium_photo-1719843013722-c2f4d69db940?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8TWFsZGl2c3xlbnwwfHwwfHx8MA%3D%3D"
                         class="rounded-lg w-full h-full object-cover" alt="">
                     <div
@@ -378,7 +393,7 @@
                         Maldives</div>
                 </div>
                 <div
-                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-4">
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2">
                     <img src="https://plus.unsplash.com/premium_photo-1697729441569-f706fdd1f71c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QWdyYXxlbnwwfHwwfHx8MA%3D%3D"
                         class="rounded-lg w-full h-full object-cover" alt="">
                     <div
@@ -388,7 +403,7 @@
                         Agra</div>
                 </div>
                 <div
-                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-4">
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2">
                     <img src="https://plus.unsplash.com/premium_photo-1661962404003-e0ca40da40ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8amFpcHVyfGVufDB8fDB8fHww"
                         class="rounded-lg w-full h-full object-cover" alt="">
                     <div
@@ -398,7 +413,7 @@
                         Jaipur</div>
                 </div>
                 <div
-                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-4">
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2">
                     <img src="https://images.unsplash.com/photo-1712388430474-ace0c16051e2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuYWxpfGVufDB8fDB8fHww"
                         class="rounded-lg w-full h-full object-cover" alt="">
                     <div
@@ -409,27 +424,31 @@
                 </div>
             </div>
         </div>
-        <div class="bg-white rounded-lg mb-4 sm:p-2 md:p-4 lg:p-6">
-            <div class="bg-white rounded-lg p-6">
+        <!--card 2-->
+        <div class="bg-white rounded-lg mb-4 px-6 py-6">
+            <div class="bg-white rounded-lg p-3">
                 <div class="mt-4 flex justify-between items-center">
-                    <h1 class="text-xl sm:text-2xl md:text-3xl font-bold font-awesome ">
+                    <!-- <h1 class="text-xl sm:text-2xl md:text-3xl font-bold font-awesome ">
                         Book Now @ 1: Lock your Holiday Package Price
-                    </h1>
-
+                    </h1> -->
+                    <div>
+                        <h2 class="text-2xl font-bold">Book Now @ 1: Lock your Holiday Package Price</h2>
+                        <p class="text-sm text-gray-600">Lock the price by paying only Rs 1 to avoid price surge</p>
+                    </div>
                     <!-- Arrow icons, hidden on small screens -->
-                   <div class="hidden sm:flex space-x-4 mb-6">
+                    <div class="hidden sm:flex space-x-4 mb-6">
                         <!-- Left arrow -->
                         <i onclick="scrollLeft1('scrollContainer2')"
                             class="fas fa-chevron-left text-blue-600 text-2xl cursor-pointer hover:text-red-600 transition duration-300"></i>
                         <!-- Right arrow -->
-                        <i
-                            class="fas fa-chevron-right text-blue-600 text-2xl cursor-pointer hover:text-red-600 transition duration-300" onclick="scrollRight('scrollContainer2')"></i>
+                        <i class="fas fa-chevron-right text-blue-600 text-2xl cursor-pointer hover:text-red-600 transition duration-300"
+                            onclick="scrollRight('scrollContainer2')"></i>
                     </div>
                 </div>
             </div>
             <div class="custom-scrollbar-hide overflow-x-auto whitespace-nowrap" id="scrollContainer2">
                 <div
-                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-4">
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2">
                     <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/1328/Stunning%20Sinquerim%20Beach.jpg?crop=134:207&downsize=134:207"
                         class="rounded-lg w-full h-full object-cover" alt="">
                     <div
@@ -439,7 +458,7 @@
                         Goa</div>
                 </div>
                 <div
-                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-4">
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2">
                     <img src="https://images.unsplash.com/photo-1585765687665-427ec8513a7b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z3VqYXJhdHxlbnwwfHwwfHx8MA%3D%3D"
                         class="rounded-lg w-full h-full object-cover" alt="">
                     <div
@@ -449,7 +468,7 @@
                         Gujarat</div>
                 </div>
                 <div
-                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-4">
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2">
                     <img src="https://images.unsplash.com/photo-1566915682737-3e97a7eed93b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRhbWlsJTIwbmFkdXxlbnwwfHwwfHx8MA%3D%3D"
                         class="rounded-lg w-full h-full object-cover" alt="">
                     <div
@@ -459,7 +478,7 @@
                         Tamil Nadu</div>
                 </div>
                 <div
-                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-4">
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2">
                     <img src="https://images.unsplash.com/photo-1583513645242-25a32d451084?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8a2VyYWxhfGVufDB8fDB8fHww"
                         class="rounded-lg w-full h-full object-cover" alt="">
                     <div
@@ -469,7 +488,7 @@
                         Kerala</div>
                 </div>
                 <div
-                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-4">
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2">
                     <img src="https://images.unsplash.com/photo-1715457573748-8e8a70b2c1be?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8a2FzaG1pcnxlbnwwfHwwfHx8MA%3D%3D"
                         class="rounded-lg w-full h-full object-cover" alt="">
                     <div
@@ -479,7 +498,7 @@
                         Kashmir</div>
                 </div>
                 <div
-                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-4">
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2">
                     <img src="https://plus.unsplash.com/premium_photo-1719843013722-c2f4d69db940?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8TWFsZGl2c3xlbnwwfHwwfHx8MA%3D%3D"
                         class="rounded-lg w-full h-full object-cover" alt="">
                     <div
@@ -489,7 +508,7 @@
                         Maldives</div>
                 </div>
                 <div
-                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-4">
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2">
                     <img src="https://plus.unsplash.com/premium_photo-1697729441569-f706fdd1f71c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QWdyYXxlbnwwfHwwfHx8MA%3D%3D"
                         class="rounded-lg w-full h-full object-cover" alt="">
                     <div
@@ -499,7 +518,7 @@
                         Agra</div>
                 </div>
                 <div
-                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-4">
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2">
                     <img src="https://plus.unsplash.com/premium_photo-1661962404003-e0ca40da40ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8amFpcHVyfGVufDB8fDB8fHww"
                         class="rounded-lg w-full h-full object-cover" alt="">
                     <div
@@ -509,7 +528,7 @@
                         Jaipur</div>
                 </div>
                 <div
-                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-4">
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2">
                     <img src="https://images.unsplash.com/photo-1712388430474-ace0c16051e2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuYWxpfGVufDB8fDB8fHww"
                         class="rounded-lg w-full h-full object-cover" alt="">
                     <div
@@ -520,15 +539,400 @@
                 </div>
             </div>
         </div>
+        <!--card 3-->
+        <div class="bg-white rounded-lg mb-4 px-6 py-6">
+            <div class="bg-white rounded-lg p-3">
+                <div class="mt-4 flex justify-between items-center">
+                    <div>
+                        <h2 class="text-2xl font-bold">Visa Free Destination</h2>
+                        <p class="text-sm text-gray-600">Upto 30% off!Limitted Time offer</p>
+                    </div>
+                    <!-- Arrow icons, hidden on small screens -->
+                    <div class="hidden sm:flex space-x-4 mb-6">
+                        <!-- Left arrow -->
+                        <i onclick="scrollLeft1('scrollContainer3')"
+                            class="fas fa-chevron-left text-blue-600 text-2xl cursor-pointer hover:text-red-600 transition duration-300"></i>
+                        <!-- Right arrow -->
+                        <i class="fas fa-chevron-right text-blue-600 text-2xl cursor-pointer hover:text-red-600 transition duration-300"
+                            onclick="scrollRight('scrollContainer3')"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-scrollbar-hide overflow-x-auto whitespace-nowrap" id="scrollContainer3">
 
+                <div
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2 rounded-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+                        alt="Thailand" class="w-full h-56 object-cover rounded-lg" />
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 bg-gradient-to-t from-black to-transparent rounded-b-lg text-white p-2 text-xs rounded-b-lg">
+                        <p class="font-bold">Thailand</p>
+                        <p>Starting at ₹35,700</p>
+                        <p>Per person</p>
+                    </div>
+                </div>
+
+                <div
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2 rounded-lg cursor-pointer">
+                    <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/1993/Grand%20Park.JPG??crop=134:207&downsize=134:207"
+                        alt="Thailand" class="w-full h-56 object-cover rounded-lg" />
+                    <div
+                        class="absolute bottom-0 left-0 right-0  bg-gradient-to-t from-black to-transparent rounded-b-lg text-white p-2 text-xs rounded-b-lg">
+                        <p class="font-bold text-lg">Maldives</p>
+                        <p>Starting at ₹25,700</p>
+                        <p>Per person</p>
+                    </div>
+                </div>
+
+                <div
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2 rounded-lg cursor-pointer">
+                    <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/listingHeaderImages/Sri%20lanka.jpg?crop=134:207&downsize=134:207"
+                        alt="Thailand" class="w-full h-56 object-cover rounded-lg" />
+                    <div
+                        class="absolute bottom-0 left-0 right-0  bg-gradient-to-t from-black to-transparent rounded-b-lg text-white p-2 text-xs rounded-b-lg">
+                        <p class="font-bold text-lg">Sri Lanka</p>
+                        <p>Starting at ₹63,700</p>
+                        <p>Per person</p>
+                    </div>
+                </div>
+
+                <div
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2 rounded-lg cursor-pointer">
+                    <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3736/hanoi%204.PNG?crop=134:207&downsize=134:207"
+                        alt="Thailand" class="w-full h-56 object-cover rounded-lg" />
+                    <div
+                        class="absolute bottom-0 left-0 right-0  bg-gradient-to-t from-black to-transparent rounded-b-lg text-white p-2 text-xs rounded-b-lg">
+                        <p class="font-bold text-lg">Vietnum</p>
+                        <p>Starting at ₹8,800</p>
+                        <p>Per person</p>
+                    </div>
+                </div>
+
+                <div
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2 rounded-lg cursor-pointer">
+                    <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/6923/Get%20amazed%20by%20the%20scenery%20on%20your%20way%20to%20Medeo.jpg?crop=134:207&downsize=134:207"
+                        alt="Thailand" class="w-full h-56 object-cover rounded-lg" />
+                    <div
+                        class="absolute bottom-0 left-0 right-0  bg-gradient-to-t from-black to-transparent rounded-b-lg text-white p-2 text-xs rounded-b-lg">
+                        <p class="font-bold text-lg">Almaty</p>
+                    </div>
+                </div>
+
+                <div
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2 rounded-lg cursor-pointer">
+                    <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/4053/20201120_HKDL_15th-Anniversary-Launch-Celebration_Characters_Mickey-and-Friends-8-4448299.jpg?crop=134:207&downsize=134:207"
+                        alt="Thailand" class="w-full h-56 object-cover rounded-lg" />
+                    <div
+                        class="absolute bottom-0 left-0 right-0  bg-gradient-to-t from-black to-transparent rounded-b-lg text-white p-2 text-xs rounded-b-lg">
+                        <p class="font-bold text-lg">Hong kong</p>
+                    </div>
+                </div>
+
+                <div
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2 rounded-lg cursor-pointer">
+                    <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/1971/legoland.jpg?crop=134:207&downsize=134:207"
+                        alt="Thailand" class="w-full h-56 object-cover rounded-lg" />
+                    <div
+                        class="absolute bottom-0 left-0 right-0  bg-gradient-to-t from-black to-transparent rounded-b-lg text-white p-2 text-xs rounded-b-lg">
+                        <p class="font-bold text-lg">Malasyia</p>
+                        <p>Starting at ₹22,400</p>
+                        <p>Per person</p>
+                    </div>
+                </div>
+
+                <div
+                    class="inline-block relative w-[150px] h-[220px] sm:w-[170px] sm:h-[250px] md:w-[170px] md:h-[250px] mr-2 rounded-lg cursor-pointer">
+                    <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/2510/Gorgeous%20beaches%20of%20%20La%20Digue.jpg?crop=134:207&downsize=134:207"
+                        alt="Thailand" class="w-full h-56 object-cover rounded-lg" />
+                    <div
+                        class="absolute bottom-0 left-0 right-0  bg-gradient-to-t from-black to-transparent rounded-b-lg text-white p-2 text-xs rounded-b-lg">
+                        <p class="font-bold text-lg">Seychelles</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button
+                        class="justify-center items-center mt-6 py-3 px-6 gradient-bg hover:opacity-90 text-white font-bold px-3 py-2 ml-2 rounded-full transition duration-300 transform hover:scale-105">
+                        View All Packages
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--what travler-->
+    <section id="travler" class="px-6 py-6">
+        <div class="text-center">
+            <h1 class="font-bold font-awesome text-3xl">What our Traveler say</h1>
+            <p class="mt-2 text-gray-500">Hear from our satisfied customers about their experiences</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16">
+            <div class="p-8 testimonial-card rounded-xl hover:transition duration-300 bg-gray-200">
+                <div class="flex items-center mb-4">
+                    <img src="https://images.unsplash.com/photo-1501901609772-df0848060b33?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Smiling woman in her 30s with curly hair standing against a tropical background"
+                        class="w-16 h-16 rounded-full object-cover">
+                    <div class="ml-4">
+                        <h4 class="font-bold">James & Emil</h4>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 italic">
+                    "For our honeymoon, Wanderlust crafted a personalized itinerary through France that included all our
+                    interests. The surprise champagne sunset cruise was the perfect romantic touch we'll never forget."
+                </p>
+                <div class="mt-4 text-sm text-gray-500">
+                    <i class="fas fa-map-marker-alt mr-2"></i> Paris,France
+                </div>
+            </div>
+            <div class="p-8 testimonial-card rounded-xl hover:transition duration-300 bg-gray-200">
+                <div class="flex items-center mb-4">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/77bdc159-02b1-4daa-bb08-d361bdc852d3.png"
+                        alt="Smiling woman in her 30s with curly hair standing against a tropical background"
+                        class="w-16 h-16 rounded-full object-cover">
+                    <div class="ml-4">
+                        <h4 class="font-bold">Sarah Johnson</h4>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 italic">"The Italian tour organized by Wanderlust was exceptional. Every detail
+                    was perfectly planned, allowing us to just relax and enjoy the sights. The local guides were
+                    incredibly knowledgeable!"</p>
+                <div class="mt-4 text-sm text-gray-500">
+                    <i class="fas fa-map-marker-alt mr-2"></i> Rome, Italy
+                </div>
+            </div>
+            <div class="p-8 testimonial-card rounded-xl hover:transition duration-300 bg-gray-200">
+                <div class="flex items-center mb-4">
+                    <img src="https://images.unsplash.com/photo-1724063738993-734e857d3afe?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8b2xkJTIwamFwYW5lc2UlMjBtYW58ZW58MHx8MHx8fDA%3D"
+                        alt="Smiling woman in her 30s with curly hair standing against a tropical background"
+                        class="w-16 h-16 rounded-full object-cover">
+                    <div class="ml-4">
+                        <h4 class="font-bold">Michal
+                        </h4>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 italic">
+                    "Our Japan trip went beyond all expectations. The itinerary balanced must-see attractions with
+                    hidden gems we'd never have found on our own. The ryokan experience was particularly memorable!"
+                </p>
+                <div class="mt-4 text-sm text-gray-500">
+                    <i class="fas fa-map-marker-alt mr-2"></i> Japan
+                </div>
+            </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Travel Inspiration</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Tips, stories, and advice from our expert travelers</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1617095038142-c5126e8749ca?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bmF0dXJlJTIwYmVhdGNofGVufDB8fDB8fHww"
+                            alt="Top 10 hidden beaches in Southeast Asia with white sand and turquoise waters"
+                            class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">
+                            <span class="mr-4"><i class="far fa-calendar mr-2"></i> May 15, 2025</span>
+                            <span><i class="far fa-comment mr-2"></i> 8 Comments</span>
+                        </div>
+                        <h3 class="font-bold text-xl mb-3">Top 10 Hidden Beaches in Southeast Asia</h3>
+                        <p class="text-gray-600 mb-4">Discover these untouched paradises away from the tourist crowds,
+                            complete with local tips for visiting each one.</p>
+                        <a href="#"
+                            class="text-blue-600 hover:text-blue-800 font-semibold transition flex items-center">
+                            Read More
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d50bb02a-5100-4a2a-a70f-4f694c543ccb.png"
+                            alt="Backpacker walking through vibrant street market in Bangkok, Thailand with colorful stalls"
+                            class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">
+                            <span class="mr-4"><i class="far fa-calendar mr-2"></i> April 2, 2025</span>
+                            <span><i class="far fa-comment mr-2"></i> 14 Comments</span>
+                        </div>
+                        <h3 class="font-bold text-xl mb-3">Budget Travel: Southeast Asia on ₹22,000/Day</h3>
+                        <p class="text-gray-600 mb-4">How to travel comfortably through Thailand, Vietnam, and Cambodia
+                            on a shoestring budget without missing out.</p>
+                        <a href="#"
+                            class="text-blue-600 hover:text-blue-800 font-semibold transition flex items-center">
+                            Read More
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b5168a0a-00b5-4632-a4ae-2d34cd87ff59.png"
+                            alt="Hiker standing on mountain ridge overlooking the Swiss Alps at sunrise"
+                            class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">
+                            <span class="mr-4"><i class="far fa-calendar mr-2"></i> March 18, 2025</span>
+                            <span><i class="far fa-comment mr-2"></i> 5 Comments</span>
+                        </div>
+                        <h3 class="font-bold text-xl mb-3">The Ultimate Guide to Hiking in the Swiss Alps</h3>
+                        <p class="text-gray-600 mb-4">Everything you need to know to plan your perfect Alpine adventure,
+                            from route selection to gear recommendations.</p>
+                        <a href="#"
+                            class="text-blue-600 hover:text-blue-800 font-semibold transition flex items-center">
+                            Read More
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button
+                    class="gradient-bg hover:opacity-90 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105">
+                    View All Articles
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!--news letter-->
+    <section id="news">
+        <div class=" text-center  gradient-bg py-16">
+            <h1 class="text-white  text-3xl font-bold font-awesome pt-16 mb-6">Get Travel Inspiration In Your Inbox</h1>
+            <p class="text-white max-w-2xl mx-auto mb-6">Sign up for exclusive deals, travel tips, and destination
+                inspiration from our experts.</p>
+            <div class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto mb-4">
+                <input type="email" placeholder="Your email address"
+                    class="flex-grow p-4 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                <button
+                    class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-4 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+
+        </div>
     </section>
 
 
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Contact Us</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Have questions or need help planning your next adventure?
+                    We'd love to hear from you.</p>
+            </div>
 
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2">Name</label>
+                            <input type="text"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Email</label>
+                            <input type="email"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Phone</label>
+                            <input type="tel"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Message</label>
+                            <textarea rows="4"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <button
+                            class="gradient-bg hover:opacity-90 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 w-full">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                <div>
+                    <div class="bg-gray-50 p-8 rounded-xl h-full">
+                        <h3 class="font-bold text-xl mb-6">Our Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-blue-600 text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold">Address</h4>
+                                    <p class="text-gray-600">ares
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-phone-alt text-blue-600 text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold">Phone</h4>
+                                    <p class="text-gray-600">+912556554652</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope text-blue-600 text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold">Email</h4>
+                                    <p class="text-gray-600">hello@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-clock text-blue-600 text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold">Hours</h4>
+                                    <p class="text-gray-600">Monday - Friday: 9am - 9am<br>Saturday: 10am -
+                                        4pm<br>Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-
-
+    <!--footer-->
+    <section id="footer">
+        <div class="bg-blue-800 h-full w-full" >
+            <h1 class="text-white">Tripper</h1>
+        </div>
+    </section>
 
 
 
@@ -550,6 +954,16 @@
             const container = document.getElementById(containerId);
             container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         }
+        const toggleButton = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        let isOpen = false;
+        const toggleBtn = document.getElementById("menu-toggle");
+        const menu = document.getElementById("mobile-menu");
+
+        toggleBtn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
     </script>
 
 
