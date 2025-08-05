@@ -29,6 +29,7 @@
             display: none;
         }
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 
 
 </head>
@@ -36,23 +37,31 @@
 <body class="font-sans">
     <!--Navigation-->
     <nav class="gradient-bg text-white shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+        <div class="container mx-auto flex justify-between items-center px-4 py-2">
+
+            <!-- Logo Left -->
             <div class="flex items-center space-x-2">
                 <i class="fas fa-plane-departure text-2xl"></i>
                 <span class="font-bold text-xl">Tripper</span>
             </div>
 
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-4">
-                <a href="#Home" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Home</a>
-                <a href="destination.html" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Destinations</a>
-                <a href="packages.html" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Packages</a>
-                <a href="testimonials.html" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Testimonials</a>
-                <a href="blog.html" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Blog</a>
-                <a href="#contact" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Contact</a>
-                <a href="login.html"
-                    class="login-bg hover:opacity-90 text-white font-bold px-3 py-2 ml-2 rounded-lg transition duration-300 transform hover:scale-105 inline-block">
-                    Login</a>
+            <!-- Centered Menu -->
+            <ul class="hidden md:flex space-x-6 absolute left-1/2 transform -translate-x-1/2">
+                <li><a href="#Home" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Home</a></li>
+                <li><a href="destination.html"
+                        class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Destinations</a></li>
+                <li><a href="packages.html" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Packages</a></li>
+                <li><a href="testimonials.html"
+                        class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Testimonials</a></li>
+                <li><a href="blog.html" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Blog</a></li>
+                <li><a href="#contact" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Contact</a></li>
+            </ul>
+
+            <!-- Right Buttons -->
+            <div class="hidden md:flex space-x-2">
+                <a href="login.html" class=" px-3 py-2 hover:bg-blue-600 rounded-lg transition">Login</a>
+                <a href="register.html"
+                    class="bg-blue-600 text-white font-semibold px-4 py-2 rounded hover:bg-[#3b82f6] transition">Register</a>
             </div>
 
             <!-- Mobile Menu Button -->
@@ -60,7 +69,6 @@
                 <i class="fas fa-bars text-xl"></i>
             </button>
         </div>
-
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden text-center flex flex-col space-y-2 px-6 py-3 bg-blue-800">
             <a href="#home" class="inline-block px-3 py-2 hover:bg-blue-600 rounded-lg">Home</a>
@@ -76,7 +84,7 @@
 
 
     <!-- Blog Section -->
-    <section id="blog" class="py-16 bg-gray-100">
+      <section id="blog" class="py-16 bg-gray-100">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">Travel Inspiration</h2>
@@ -106,28 +114,90 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- Blog Post 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCqDcCQurDtv0Q9HAwVLFWgDJt-_ACoD3WhA&s"
+                            alt="Backpacker walking through vibrant street market in Bangkok, Thailand with colorful stalls"
+                            class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">
+                            <span class="mr-4"><i class="far fa-calendar mr-2"></i> April 2, 2025</span>
+                            <span><i class="far fa-comment mr-2"></i> 14 Comments</span>
+                        </div>
+                        <h3 class="font-bold text-xl mb-3">Budget Travel: Southeast Asia on ₹22,000/Day</h3>
+                        <p class="text-gray-600 mb-4">How to travel comfortably through Thailand, Vietnam, and Cambodia
+                            on a shoestring budget without missing out.</p>
+                        <a href="#"
+                            class="text-blue-600 hover:text-blue-800 font-semibold transition flex items-center">
+                            Read More
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="data:image/jpeg;base64,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"
+                            alt="Hiker standing on mountain ridge overlooking the Swiss Alps at sunrise"
+                            class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">
+                            <span class="mr-4"><i class="far fa-calendar mr-2"></i> March 18, 2025</span>
+                            <span><i class="far fa-comment mr-2"></i> 5 Comments</span>
+                        </div>
+                        <h3 class="font-bold text-xl mb-3">The Ultimate Guide to Hiking in the Swiss Alps</h3>
+                        <p class="text-gray-600 mb-4">Everything you need to know to plan your perfect Alpine adventure,
+                            from route selection to gear recommendations.</p>
+                        <a href="#"
+                            class="text-blue-600 hover:text-blue-800 font-semibold transition flex items-center">
+                            Read More
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class=" flex justify-center">
-                <img src="./media/original-a3291671b628881cb36f8-unscreen.gif" alt="" class="h-[250px]">
-            </div> 
-            
-            <div class="text-center">
+
+            <div class="text-center mt-12">
                 <button
-                    class="border-blue-500 text-blue-500 hover:opacity-90  font-bold py-3 px-8 rounded-full text-lg transition duration-300 border-4  transform hover:scale-105">
-                       View All Articles
+                    class="gradient-bg hover:opacity-90 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105">
+                    View All Articles
                 </button>
             </div>
         </div>
     </section>
+
+    <div class=" flex justify-center">
+        <img src="./media/original-a3291671b628881cb36f8-unscreen.gif" alt=""
+            class="h-[150px] w-[200px] md:h-[250px] md:w-[400px]">
+    </div>
+
+    <div class="text-center mb-12">
+
+        <button
+            class="gradient-bg hover:opacity-90 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300">
+            Load More
+        </button>
+    </div>
+
+    <!--footer-->
+
     <footer class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
-         <div
+        <div
             class="absolute inset-0 bg-[url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTeWSFIqvQ6ivLRmq5nUc4RUVaA2cwv7-HBIrCJfwHdm0HDzH82')] bg-no-repeat bg-cover opacity-10">
         </div>
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/50"></div>
         <div class="max-w-7xl mx-auto relative">
             <div class="grid lg:grid-cols-12 gap-12 px-6 py-16">
                 <div class="lg:col-span-4 space-y-8">
-                    <div class="text-3xl font-['Pacifico'] text-white mb-4">logo</div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-plane-departure text-2xl"></i>
+                        <span class="font-bold text-xl">Tripper</span>
+                    </div>
                     <p class="text-gray-300 text-lg leading-relaxed">Crafting extraordinary journeys and unforgettable
                         memories across the globe. Join our community of passionate travelers.</p>
                     <div class="flex flex-col space-y-4">
@@ -137,8 +207,8 @@
                                     <i class="ri-mail-line text-primary"></i>
                                 </div>
                             </div>
-                            <a href="mailto:hello@wanderlusttravel.com"
-                                class="text-gray-300 hover:text-primary transition-colors">hello@wanderlusttravel.com</a>
+                            <a href="mailto:sacs7808@gmail.com"
+                                class="text-gray-300 hover:text-primary transition-colors">team7@gmail.com</a>
                         </div>
                         <div class="flex items-center space-x-3">
                             <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
@@ -146,8 +216,8 @@
                                     <i class="ri-phone-line text-primary"></i>
                                 </div>
                             </div>
-                            <a href="tel:+15551234567" class="text-gray-300 hover:text-primary transition-colors">+1
-                                (555) 123-4567</a>
+                            <a href="tel:+15551234567"
+                                class="text-gray-300 hover:text-primary transition-colors">+918529637410</a>
                         </div>
                     </div>
                     <div class="pt-6">
@@ -186,15 +256,52 @@
                 </div>
                 <div class="lg:col-span-2">
                     <h3 class="text-lg font-bold mb-6 text-white">Company</h3>
+                    <!-- Company links -->
                     <ul class="space-y-4">
-                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center"><i
-                                    class="ri-arrow-right-s-line mr-2"></i>About Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center"><i
-                                    class="ri-arrow-right-s-line mr-2"></i>Our Team</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center"><i
-                                    class="ri-arrow-right-s-line mr-2"></i>Careers</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center"><i
-                                    class="ri-arrow-right-s-line mr-2"></i>Press Kit</a></li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center">
+                                <i class="ri-information-line mr-2"></i> About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center">
+                                <i class="ri-team-line mr-2"></i> Our Team
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center">
+                                <i class="ri-briefcase-line mr-2"></i> Careers
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center">
+                                <i class="ri-file-list-line mr-2"></i> Press Kit
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Destinations links -->
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center">
+                                <i class="ri-earth-line mr-2"></i> Europe Tours
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center">
+                                <i class="ri-map-pin-2-line mr-2"></i> Asian Wonders
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center">
+                                <i class="ri-compass-2-line mr-2"></i> African Safari
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center">
+                                <i class="ri-flight-takeoff-line mr-2"></i> American Dreams
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="lg:col-span-2">
@@ -232,32 +339,7 @@
                             Subscribe
                         </button>
                     </form>
-                    <div class="mt-8">
-                        <div class="text-sm font-semibold text-gray-400 mb-4">Payment Methods</div>
-                        <div class="flex space-x-3">
-                            <div
-                                class="w-12 h-8 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center transform hover:scale-110 transition-all duration-300">
-                                <div class="w-6 h-6 flex items-center justify-center">
-                                    <i class="ri-visa-fill text-gray-400"></i>
-                                </div>
-                            </div>
-                            <div class="w-12 h-8 bg-white/10 rounded-lg flex items-center justify-center">
-                                <div class="w-6 h-6 flex items-center justify-center">
-                                    <i class="ri-mastercard-fill text-gray-400"></i>
-                                </div>
-                            </div>
-                            <div class="w-12 h-8 bg-white/10 rounded-lg flex items-center justify-center">
-                                <div class="w-6 h-6 flex items-center justify-center">
-                                    <i class="ri-paypal-fill text-gray-400"></i>
-                                </div>
-                            </div>
-                            <div class="w-12 h-8 bg-white/10 rounded-lg flex items-center justify-center">
-                                <div class="w-6 h-6 flex items-center justify-center">
-                                    <i class="ri-apple-fill text-gray-400"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
             <div class="relative">
@@ -266,7 +348,7 @@
                     <div class="px-6 py-8 relative">
                         <div class="grid md:grid-cols-2 gap-8 items-center">
                             <div class="text-gray-400 text-sm">
-                                <p>&copy; 2025 Wanderlust Travel. All rights reserved.</p>
+                                <p>&copy; TEAM 7 @. All rights reserved.</p>
                             </div>
                             <div class="flex flex-wrap gap-4 md:justify-end text-sm">
                                 <a href="#" class="text-gray-400 hover:text-primary transition-colors">Privacy
@@ -282,6 +364,40 @@
                 </div>
             </div>
     </footer>
+
+
+
+
+
+
+
+
+
+    <script>
+        const scrollAmount = 300;
+
+        function scrollLeft1(containerId) {
+            const container = document.getElementById(containerId);
+            container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        }
+
+        function scrollRight(containerId) {
+            const container = document.getElementById(containerId);
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+        const toggleButton = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        let isOpen = false;
+        const toggleBtn = document.getElementById("menu-toggle");
+        const menu = document.getElementById("mobile-menu");
+
+        toggleBtn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+
+
 </body>
 
 </html>

@@ -1,1 +1,394 @@
-<h1>testimonials</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triper</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+        }
+
+        .login-bg {
+            background: #3b82f6;
+        }
+
+        .destination-card:hover .destination-img {
+            transform: scale(1.05);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .custom-scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+
+</head>
+
+<body class="font-sans">
+    <!--Navigation-->
+    <nav class="gradient-bg text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4 py-2">
+
+            <!-- Logo Left -->
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-plane-departure text-2xl"></i>
+                <span class="font-bold text-xl">Tripper</span>
+            </div>
+
+            <!-- Centered Menu -->
+            <ul class="hidden md:flex space-x-6 absolute left-1/2 transform -translate-x-1/2">
+                <li><a href="#Home" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Home</a></li>
+                <li><a href="destination.html"
+                        class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Destinations</a></li>
+                <li><a href="packages.html" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Packages</a></li>
+                <li><a href="testimonials.html"
+                        class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Testimonials</a></li>
+                <li><a href="blog.html" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Blog</a></li>
+                <li><a href="#contact" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Contact</a></li>
+            </ul>
+
+            <!-- Right Buttons -->
+            <div class="hidden md:flex space-x-2">
+                <a href="login.html" class=" px-3 py-2 hover:bg-blue-600 rounded-lg transition">Login</a>
+                <a href="register.html"
+                    class="bg-blue-600 text-white font-semibold px-4 py-2 rounded hover:bg-[#3b82f6] transition">Register</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden text-center flex flex-col space-y-2 px-6 py-3 bg-blue-800">
+            <a href="#home" class="inline-block px-3 py-2 hover:bg-blue-600 rounded-lg">Home</a>
+            <a href="destination.html" class="inline-block px-3 py-2 hover:bg-blue-600 rounded-lg">Destinations</a>
+            <a href="packages.html" class="inline-block px-3 py-2 hover:bg-blue-600 rounded-lg">Packages</a>
+            <a href="testimonials.html" class="inline-block px-3 py-2 hover:bg-blue-600 rounded-lg">Testimonials</a>
+            <a href="blog.html" class="inline-block px-3 py-2 hover:bg-blue-600 rounded-lg">Blog</a>
+            <a href="#contact" class="inline-block px-3 py-2 hover:bg-blue-600 rounded-lg">Contact</a>
+            <a href="login.html" class="inline-block bg-blue-600 text-white rounded-lg px-3 py-2 font-bold">Login</a>
+        </div>
+
+    </nav>
+    <!--testmonials-->
+    <section id="travler" class="px-6 py-6">
+        <div class="text-center">
+            <h1 class="font-bold font-awesome text-3xl">What our Traveler say</h1>
+            <p class="mt-2 text-gray-500">Hear from our satisfied customers about their experiences</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16">
+            <div class="p-8 testimonial-card rounded-xl hover:transition duration-300 bg-gray-200">
+                <div class="flex items-center mb-4">
+                    <img src="https://images.unsplash.com/photo-1501901609772-df0848060b33?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Smiling woman in her 30s with curly hair standing against a tropical background"
+                        class="w-16 h-16 rounded-full object-cover">
+                    <div class="ml-4">
+                        <h4 class="font-bold">James & Emil</h4>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 italic">
+                    "For our honeymoon, Wanderlust crafted a personalized itinerary through France that included all our
+                    interests. The surprise champagne sunset cruise was the perfect romantic touch we'll never forget."
+                </p>
+                <div class="mt-4 text-sm text-gray-500">
+                    <i class="fas fa-map-marker-alt mr-2"></i> Paris,France
+                </div>
+            </div>
+            <div class="p-8 testimonial-card rounded-xl hover:transition duration-300 bg-gray-200">
+                <div class="flex items-center mb-4">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/77bdc159-02b1-4daa-bb08-d361bdc852d3.png"
+                        alt="Smiling woman in her 30s with curly hair standing against a tropical background"
+                        class="w-16 h-16 rounded-full object-cover">
+                    <div class="ml-4">
+                        <h4 class="font-bold">Sarah Johnson</h4>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 italic">"The Italian tour organized by Wanderlust was exceptional. Every detail
+                    was perfectly planned, allowing us to just relax and enjoy the sights. The local guides were
+                    incredibly knowledgeable!"</p>
+                <div class="mt-4 text-sm text-gray-500">
+                    <i class="fas fa-map-marker-alt mr-2"></i> Rome, Italy
+                </div>
+            </div>
+            <div class="p-8 testimonial-card rounded-xl hover:transition duration-300 bg-gray-200">
+                <div class="flex items-center mb-4">
+                    <img src="https://images.unsplash.com/photo-1724063738993-734e857d3afe?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8b2xkJTIwamFwYW5lc2UlMjBtYW58ZW58MHx8MHx8fDA%3D"
+                        alt="Smiling woman in her 30s with curly hair standing against a tropical background"
+                        class="w-16 h-16 rounded-full object-cover">
+                    <div class="ml-4">
+                        <h4 class="font-bold">Michal
+                        </h4>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 italic">
+                    "Our Japan trip went beyond all expectations. The itinerary balanced must-see attractions with
+                    hidden gems we'd never have found on our own. The ryokan experience was particularly memorable!"
+                </p>
+                <div class="mt-4 text-sm text-gray-500">
+                    <i class="fas fa-map-marker-alt mr-2"></i> Japan
+                </div>
+            </div>
+    </section>
+
+    <div class=" flex justify-center">
+        <img src="./media/original-a3291671b628881cb36f8-unscreen.gif" alt=""
+            class="h-[150px] w-[200px] md:h-[250px] md:w-[400px]">
+    </div>
+
+    <div class="text-center mb-12">
+
+        <button
+            class="gradient-bg hover:opacity-90 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300">
+            View More
+        </button>
+    </div>
+
+    <!--footer-->
+
+    <footer class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+        <div
+            class="absolute inset-0 bg-[url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTeWSFIqvQ6ivLRmq5nUc4RUVaA2cwv7-HBIrCJfwHdm0HDzH82')] bg-no-repeat bg-cover opacity-10">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/50"></div>
+        <div class="max-w-7xl mx-auto relative">
+            <div class="grid lg:grid-cols-12 gap-12 px-6 py-16">
+                <div class="lg:col-span-4 space-y-8">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-plane-departure text-2xl"></i>
+                        <span class="font-bold text-xl">Tripper</span>
+                    </div>
+                    <p class="text-gray-300 text-lg leading-relaxed">Crafting extraordinary journeys and unforgettable
+                        memories across the globe. Join our community of passionate travelers.</p>
+                    <div class="flex flex-col space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
+                                <div class="w-5 h-5 flex items-center justify-center">
+                                    <i class="ri-mail-line text-primary"></i>
+                                </div>
+                            </div>
+                            <a href="mailto:sacs7808@gmail.com"
+                                class="text-gray-300 hover:text-primary transition-colors">team7@gmail.com</a>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
+                                <div class="w-5 h-5 flex items-center justify-center">
+                                    <i class="ri-phone-line text-primary"></i>
+                                </div>
+                            </div>
+                            <a href="tel:+15551234567"
+                                class="text-gray-300 hover:text-primary transition-colors">+918529637410</a>
+                        </div>
+                    </div>
+                    <div class="pt-6">
+                        <div class="text-sm font-semibold text-gray-400 mb-4">Connect With Us</div>
+                        <div class="flex space-x-4">
+                            <a href="#"
+                                class="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center group hover:bg-primary hover:scale-110 transition-all duration-300">
+                                <div class="w-6 h-6 flex items-center justify-center">
+                                    <i
+                                        class="ri-facebook-fill text-gray-400 group-hover:text-white transition-colors"></i>
+                                </div>
+                            </a>
+                            <a href="#"
+                                class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center group hover:bg-primary transition-all duration-300">
+                                <div class="w-6 h-6 flex items-center justify-center">
+                                    <i
+                                        class="ri-twitter-fill text-gray-400 group-hover:text-white transition-colors"></i>
+                                </div>
+                            </a>
+                            <a href="#"
+                                class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center group hover:bg-primary transition-all duration-300">
+                                <div class="w-6 h-6 flex items-center justify-center">
+                                    <i
+                                        class="ri-instagram-fill text-gray-400 group-hover:text-white transition-colors"></i>
+                                </div>
+                            </a>
+                            <a href="#"
+                                class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center group hover:bg-primary transition-all duration-300">
+                                <div class="w-6 h-6 flex items-center justify-center">
+                                    <i
+                                        class="ri-youtube-fill text-gray-400 group-hover:text-white transition-colors"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-2">
+                    <h3 class="text-lg font-bold mb-6 text-white">Company</h3>
+                    <!-- Company links -->
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center">
+                                <i class="ri-information-line mr-2"></i> About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center">
+                                <i class="ri-team-line mr-2"></i> Our Team
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center">
+                                <i class="ri-briefcase-line mr-2"></i> Careers
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center">
+                                <i class="ri-file-list-line mr-2"></i> Press Kit
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Destinations links -->
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center">
+                                <i class="ri-earth-line mr-2"></i> Europe Tours
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center">
+                                <i class="ri-map-pin-2-line mr-2"></i> Asian Wonders
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center">
+                                <i class="ri-compass-2-line mr-2"></i> African Safari
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center">
+                                <i class="ri-flight-takeoff-line mr-2"></i> American Dreams
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-2">
+                    <h3 class="text-lg font-bold mb-6 text-white">Destinations</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center"><i
+                                    class="ri-arrow-right-s-line mr-2"></i>Europe Tours</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center"><i
+                                    class="ri-arrow-right-s-line mr-2"></i>Asian Wonders</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center"><i
+                                    class="ri-arrow-right-s-line mr-2"></i>African Safari</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center"><i
+                                    class="ri-arrow-right-s-line mr-2"></i>American Dreams</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-4">
+                    <h3 class="text-lg font-bold mb-6 text-white">Newsletter</h3>
+                    <p class="text-gray-400 mb-6">Subscribe to our newsletter and get exclusive travel deals, tips, and
+                        inspiring stories.</p>
+                    <form class="flex space-x-2">
+                        <div class="relative flex-1">
+                            <input type="email" placeholder="Enter your email"
+                                class="w-full bg-white/10 backdrop-blur-sm rounded-xl pl-12 pr-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary border-none">
+                            <div class="absolute left-4 top-1/2 transform -translate-y-1/2">
+                                <div class="w-5 h-5 flex items-center justify-center">
+                                    <i class="ri-mail-line text-gray-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit"
+                            class="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-white px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 whitespace-nowrap !rounded-button flex items-center justify-center">
+                            <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                <i class="ri-send-plane-fill"></i>
+                            </div>
+                            Subscribe
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-secondary/20"></div>
+                <div class="border-t border-white/10 mt-12">
+                    <div class="px-6 py-8 relative">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="text-gray-400 text-sm">
+                                <p>&copy; TEAM 7 @. All rights reserved.</p>
+                            </div>
+                            <div class="flex flex-wrap gap-4 md:justify-end text-sm">
+                                <a href="#" class="text-gray-400 hover:text-primary transition-colors">Privacy
+                                    Policy</a>
+                                <span class="text-gray-600">•</span>
+                                <a href="#" class="text-gray-400 hover:text-primary transition-colors">Terms of
+                                    Service</a>
+                                <span class="text-gray-600">•</span>
+                                <a href="#" class="text-gray-400 hover:text-primary transition-colors">Cookie Policy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+    <script>
+        const scrollAmount = 300;
+
+        function scrollLeft1(containerId) {
+            const container = document.getElementById(containerId);
+            container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        }
+
+        function scrollRight(containerId) {
+            const container = document.getElementById(containerId);
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+        const toggleButton = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        let isOpen = false;
+        const toggleBtn = document.getElementById("menu-toggle");
+        const menu = document.getElementById("mobile-menu");
+
+        toggleBtn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+
+
+</body>
+
+</html>
