@@ -1,89 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activities in Dubai</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+        }
+
+        .login-bg {
+            background: #3b82f6;
+        }
+
+        .destination-card:hover .destination-img {
+            transform: scale(1.05);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .custom-scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+
 </head>
-<body>
-    
 
-    
+<body class="bg-gray-50 font-sans">
+    <nav class="gradient-bg to-teal-400 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex items-center justify-between px-4 py-2">
 
-    <h1 class="text-center text-2xl font-bold bg-gradient-to-r from-blue-900 via-indigo-800 to-purple-800 p-4">SHOWING ACTIVITIES IN DUBAI</h1><hr>
-    <div class="mx-50 my-8 flex gap-4 flex-wrap">
-
-        <div class="w-64  bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 transform hover:scale-105">
-            <div class="p-6">
-                <img src="./112.png" alt="" class="h-[160px]">
-               <a href="./meusum.html"><h2 class="text-xl font-bold mb-2">Museum of The Future</h2></a> 
-                <p class="text-gray-700 text-base"></p>
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-plane-departure text-2xl"></i>
+                <span class="font-bold text-xl">Tripper</span>
             </div>
+
+            <!-- Centered Nav -->
+            <ul class="hidden md:flex space-x-6 justify-center flex-1">
+                <li><a href="index.html" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Home</a></li>
+                <li><a href="travel.html" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Destinations</a>
+                </li>
+                <li><a href="packages.html" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Packages</a></li>
+                <li><a href="testimonials.html"
+                        class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Testimonials</a></li>
+                <li><a href="blog.html" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Blog</a></li>
+                <li><a href="#contact" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Contact</a></li>
+            </ul>
+
+            <!-- Login/Register -->
+            <div class="hidden md:flex space-x-2">
+                <a href="login.html" class="px-3 py-2 hover:bg-blue-600 rounded-lg transition">Login</a>
+                <a href="register.html"
+                    class="bg-blue-600 text-white font-semibold px-4 py-2 rounded hover:bg-blue-700 transition">Register</a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
         </div>
 
-
-        <div class="w-64  bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 transform hover:scale-105">
-            <div class="p-6">
-                <img src="./113.jpg" alt="" class="h-[160px]">
-                <h2 class="text-xl font-bold mb-2">Burj Khalifa At The Top ticket with Optional Premium Access</h2>
-                <p class="text-gray-700 text-base"></p>
-            </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden text-center flex flex-col space-y-2 px-6 py-3 bg-blue-800">
+            <a href="index.html" class="inline-block px-3 py-2 hover:bg-blue-600 rounded-lg">Home</a>
+            <a href="travel.html" class="inline-block px-3 py-2 hover:bg-blue-600 rounded-lg">Destinations</a>
+            <a href="packages.html" class="inline-block px-3 py-2 hover:bg-blue-600 rounded-lg">Packages</a>
+            <a href="testimonials.html" class="inline-block px-3 py-2 hover:bg-blue-600 rounded-lg">Testimonials</a>
+            <a href="blog.html" class="inline-block px-3 py-2 hover:bg-blue-600 rounded-lg">Blog</a>
+            <a href="#contact" class="inline-block px-3 py-2 hover:bg-blue-600 rounded-lg">Contact</a>
+            <a href="login.html" class="inline-block bg-blue-600 text-white rounded-lg px-3 py-2 font-bold">Login</a>
         </div>
+    </nav>
 
 
-        <div class="w-64 bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 transform hover:scale-105">
-            <div class="p-6">
-                <img src="./114.png" alt="" class="h-[160px]">
-                <h2 class="text-xl font-bold mb-2">Atlantis Aquaventure Waterpark</h2>
-                <p class="text-gray-700 text-base"></p>
+    <!-- Heading -->
+    <h1 class="text-center text-3xl font-awesome font-bold text-black py-6 ">
+        Showing Activities in Dubai
+    </h1>
+
+    <!-- Activity Grid -->
+    <div class="container mx-auto px-4 py-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+            <!-- Card -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                <img src="./media/112.png" alt="" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <a href="meusum.html">
+                        <h2 class="text-lg font-bold text-gray-800 hover:text-indigo-600">Museum of The Future</h2>
+                    </a>
+                    <p class="text-gray-600 text-sm mt-2">A futuristic landmark showcasing cutting-edge innovation.</p>
+                </div>
             </div>
-        </div>
 
-
-        <div class="w-64  bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 transform hover:scale-105">
-            <div class="p-6">
-                <img src="./115.png" alt="" class="h-[160px]">
-                <h2 class="text-xl font-bold mb-2">Miracle Garden Dubai</h2>
-                <p class="text-gray-700 text-base"></p>
+            <!-- Card -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                <img src="./media/113.jpg" alt="" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-lg font-bold text-gray-800">Burj Khalifa At The Top</h2>
+                    <p class="text-gray-600 text-sm mt-2">Reach the clouds with optional premium access views.</p>
+                </div>
             </div>
-        </div>
 
-
-        <div class="w-64  bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 transform hover:scale-105">
-            <div class="p-6">
-                <img src="./223.png" alt="" class="h-[160px]">
-                <h2 class="text-xl font-bold mb-2">IMG Worlds of Adventure</h2>
-                <p class="text-gray-700 text-base"></p>
+            <!-- Card -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                <img src="./media/114.png" alt="" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-lg font-bold text-gray-800">Atlantis Aquaventure</h2>
+                    <p class="text-gray-600 text-sm mt-2">The largest waterpark in the Middle East – pure thrills!</p>
+                </div>
             </div>
-        </div>
 
-
-        <div class="w-64  bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 transform hover:scale-105">
-            <div class="p-6">
-                <img src="./224.jpg" alt="" class="h-[160px]">
-                <h2 class="text-xl font-bold mb-2">Dubai Marina Yacht Tour with Optional Breakfast or BBQ</h2>
-                <p class="text-gray-700 text-base"></p>
+            <!-- Card -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                <img src="./media/115.png" alt="" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-lg font-bold text-gray-800">Miracle Garden Dubai</h2>
+                    <p class="text-gray-600 text-sm mt-2">A floral paradise with stunning themed displays.</p>
+                </div>
             </div>
-        </div>
 
-
-        <div class="w-64  bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 transform hover:scale-105">
-            <div class="p-6">
-                <img src="./225.jpg" alt="" class="h-[160px]">
-                <h2 class="text-xl font-bold mb-2">Abu Dhabi Day Tour From Dubai with Sheikh Zayed Grand Mosque</h2>
-                <p class="text-gray-700 text-base"></p>
+            <!-- Card -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                <img src="./media/223.png" alt="" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-lg font-bold text-gray-800">IMG Worlds of Adventure</h2>
+                    <p class="text-gray-600 text-sm mt-2">Indoor theme park packed with Marvel & Cartoon rides.</p>
+                </div>
             </div>
-        </div>
 
-        <div class="w-64  bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 transform hover:scale-105">
-            <div class="p-6">
-                <img src="./226.png" alt="" class="h-[160px]">
-                <h2 class="text-xl font-bold mb-2">Dubai Aquarium And Underwater Zoo</h2>
-                <p class="text-gray-700 text-base"></p>
+            <!-- Card -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                <img src="./media/224.jpg" alt="" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-lg font-bold text-gray-800">Dubai Marina Yacht Tour</h2>
+                    <p class="text-gray-600 text-sm mt-2">Enjoy breakfast or BBQ with skyline views from the water.</p>
+                </div>
             </div>
+
+            <!-- Card -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                <img src="./media/225.jpg" alt="" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-lg font-bold text-gray-800">Abu Dhabi Day Tour</h2>
+                    <p class="text-gray-600 text-sm mt-2">Visit Sheikh Zayed Mosque and top capital sights.</p>
+                </div>
+            </div>
+
+            <!-- Card -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+                <img src="./media/226.png" alt="" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-lg font-bold text-gray-800">Dubai Aquarium & Zoo</h2>
+                    <p class="text-gray-600 text-sm mt-2">Explore marine life in one of the world’s largest aquariums.
+                    </p>
+                </div>
+            </div>
+
         </div>
     </div>
+
+    <footer class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+        <div
+            class="absolute inset-0 bg-[url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTeWSFIqvQ6ivLRmq5nUc4RUVaA2cwv7-HBIrCJfwHdm0HDzH82')] bg-no-repeat bg-cover opacity-10">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/50"></div>
+        <div class="max-w-7xl mx-auto relative">
+            <div class="grid lg:grid-cols-12 gap-12 px-6 py-16">
+                <div class="lg:col-span-4 space-y-8">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-plane-departure text-2xl"></i>
+                        <span class="font-bold text-xl">Tripper</span>
+                    </div>
+                    <p class="text-gray-300 text-lg leading-relaxed">Crafting extraordinary journeys and unforgettable
+                        memories across the globe. Join our community of passionate travelers.</p>
+                    <div class="flex flex-col space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
+                                <div class="w-5 h-5 flex items-center justify-center">
+                                    <i class="ri-mail-line text-primary"></i>
+                                </div>
+                            </div>
+                            <a href="mailto:sacs7808@gmail.com"
+                                class="text-gray-300 hover:text-primary transition-colors">team7@gmail.com</a>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
+                                <div class="w-5 h-5 flex items-center justify-center">
+                                    <i class="ri-phone-line text-primary"></i>
+                                </div>
+                            </div>
+                            <a href="tel:+15551234567"
+                                class="text-gray-300 hover:text-primary transition-colors">+918529637410</a>
+                        </div>
+                    </div>
+                    <div class="pt-6">
+                        <div class="text-sm font-semibold text-gray-400 mb-4">Connect With Us</div>
+                        <div class="flex space-x-4">
+                            <a href="#"
+                                class="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center group hover:bg-primary hover:scale-110 transition-all duration-300">
+                                <div class="w-6 h-6 flex items-center justify-center">
+                                    <i
+                                        class="ri-facebook-fill text-gray-400 group-hover:text-white transition-colors"></i>
+                                </div>
+                            </a>
+                            <a href="#"
+                                class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center group hover:bg-primary transition-all duration-300">
+                                <div class="w-6 h-6 flex items-center justify-center">
+                                    <i
+                                        class="ri-twitter-fill text-gray-400 group-hover:text-white transition-colors"></i>
+                                </div>
+                            </a>
+                            <a href="#"
+                                class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center group hover:bg-primary transition-all duration-300">
+                                <div class="w-6 h-6 flex items-center justify-center">
+                                    <i
+                                        class="ri-instagram-fill text-gray-400 group-hover:text-white transition-colors"></i>
+                                </div>
+                            </a>
+                            <a href="#"
+                                class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center group hover:bg-primary transition-all duration-300">
+                                <div class="w-6 h-6 flex items-center justify-center">
+                                    <i
+                                        class="ri-youtube-fill text-gray-400 group-hover:text-white transition-colors"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-2">
+                    <h3 class="text-lg font-bold mb-6 text-white">Company</h3>
+                    <!-- Company links -->
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center">
+                                <i class="ri-information-line mr-2"></i> About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center">
+                                <i class="ri-team-line mr-2"></i> Our Team
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center">
+                                <i class="ri-briefcase-line mr-2"></i> Careers
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center">
+                                <i class="ri-file-list-line mr-2"></i> Press Kit
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Destinations links -->
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center">
+                                <i class="ri-earth-line mr-2"></i> Europe Tours
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center">
+                                <i class="ri-map-pin-2-line mr-2"></i> Asian Wonders
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center">
+                                <i class="ri-compass-2-line mr-2"></i> African Safari
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center">
+                                <i class="ri-flight-takeoff-line mr-2"></i> American Dreams
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-2">
+                    <h3 class="text-lg font-bold mb-6 text-white">Destinations</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center"><i
+                                    class="ri-arrow-right-s-line mr-2"></i>Europe Tours</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center"><i
+                                    class="ri-arrow-right-s-line mr-2"></i>Asian Wonders</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center"><i
+                                    class="ri-arrow-right-s-line mr-2"></i>African Safari</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors flex items-center"><i
+                                    class="ri-arrow-right-s-line mr-2"></i>American Dreams</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-4">
+                    <h3 class="text-lg font-bold mb-6 text-white">Newsletter</h3>
+                    <p class="text-gray-400 mb-6">Subscribe to our newsletter and get exclusive travel deals, tips, and
+                        inspiring stories.</p>
+                    <form class="flex space-x-2">
+                        <div class="relative flex-1">
+                            <input type="email" placeholder="Enter your email"
+                                class="w-full bg-white/10 backdrop-blur-sm rounded-xl pl-12 pr-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary border-none">
+                            <div class="absolute left-4 top-1/2 transform -translate-y-1/2">
+                                <div class="w-5 h-5 flex items-center justify-center">
+                                    <i class="ri-mail-line text-gray-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit"
+                            class="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-white px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 whitespace-nowrap !rounded-button flex items-center justify-center">
+                            <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                <i class="ri-send-plane-fill"></i>
+                            </div>
+                            Subscribe
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-secondary/20"></div>
+                <div class="border-t border-white/10 mt-12">
+                    <div class="px-6 py-8 relative">
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+                            <div class="text-gray-400 text-sm">
+                                <p>&copy; TEAM 7 @. All rights reserved.</p>
+                            </div>
+                            <div class="flex flex-wrap gap-4 md:justify-end text-sm">
+                                <a href="#" class="text-gray-400 hover:text-primary transition-colors">Privacy
+                                    Policy</a>
+                                <span class="text-gray-600">•</span>
+                                <a href="#" class="text-gray-400 hover:text-primary transition-colors">Terms of
+                                    Service</a>
+                                <span class="text-gray-600">•</span>
+                                <a href="#" class="text-gray-400 hover:text-primary transition-colors">Cookie Policy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+
+    <script>
+        const scrollAmount = 300;
+
+        function scrollLeft1(containerId) {
+            const container = document.getElementById(containerId);
+            container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        }
+
+        function scrollRight(containerId) {
+            const container = document.getElementById(containerId);
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+        const toggleButton = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        let isOpen = false;
+        const toggleBtn = document.getElementById("menu-toggle");
+        const menu = document.getElementById("mobile-menu");
+
+        toggleBtn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+
 </body>
+
 </html>
