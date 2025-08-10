@@ -1,183 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Testimonials | Wanderlust Travel</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triper - Login</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+    }
+
+    .login-bg {
+      background: #3b82f6;
+    }
+
+    .destination-card:hover .destination-img {
+      transform: scale(1.05);
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .custom-scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+
 </head>
-<body class="bg-gray-100 text-gray-800">
 
-  <!-- Page Header -->
-  <section class="text-center py-12">
-    <h2 class="text-5xl font-bold text-indigo-700 mb-4">What Our Travelers Say</h2>
-    <p class="text-gray-600 text-lg">Real experiences from real people</p>
-  </section>
-
-  <!-- Testimonials Grid -->
-  <section class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-
-    <!-- Testimonial Card (Repeat 8x) -->
-    <!-- 1 -->
-    <div class="p-8 testimonial-card rounded-xl hover:transition duration-300 bg-gray-200">
-      <div class="flex items-center mb-4">
-        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="" class="w-16 h-16 rounded-full object-cover">
-        <div class="ml-4">
-          <h4 class="font-bold">Sarah Johnson</h4>
-          <div class="flex text-yellow-400">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-        </div>
+<body
+  class="h-screen bg-[url('https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsJTIwYWlycG9ydHxlbnwwfHwwfHx8MA%3D%3D')] bg-cover bg-center flex items-center justify-center">
+  <div class="bg-white w-[500px] p-16 rounded-lg m-8">
+    <div class="mb-6 flex justify-center items-center">
+      <h1 class="text-gray-600 font-bold text-3xl md:text-4xl mb-4 font-awesome font-sans">Login</h1>
+    </div>
+    <form class="space-y-6">
+      <div>
+        <label class="block text-gray-700 mb-2">Email</label>
+        <input type="email"
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
-      <p class="text-gray-600 italic">"The Italian tour organized by Wanderlust was exceptional. Every detail was perfectly planned."</p>
-      <div class="mt-4 text-sm text-gray-500">
-        <i class="fas fa-map-marker-alt mr-2"></i> Rome, Italy
+      <div>
+        <label class="block text-gray-700 mb-2">password</label>
+        <input type="password"
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+    </form>
+          <a href="index.html">
+        <button
+          class="mt-4 gradient-bg hover:opacity-90 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 w-full">
+          login
+        </button></a>
+
+    <div class="mb-4 flex justify-center items-center">
+      <h1 class="font-bold text-1xl mt-6 font-awesome font-sans">or</h1>
+    </div>
+    <div class="flex justify-center">
+      <div class="h-12 w-12 mr-4">
+        <img
+          src="data:image/png;base64,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"
+          alt="">
+      </div>
+      <div class="h-6 w-10 mr-4">
+        <img
+          src="data:image/jpeg;base64,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"
+          alt="">
+      </div>
+      <div class="h-12 w-10">
+        <img
+          src="data:image/png;base64,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"
+          alt="">
       </div>
     </div>
-
-    <!-- 2 -->
-    <div class="p-8 testimonial-card rounded-xl hover:transition duration-300 bg-gray-200">
-      <div class="flex items-center mb-4">
-        <img src="https://randomuser.me/api/portraits/men/31.jpg" alt="" class="w-16 h-16 rounded-full object-cover">
-        <div class="ml-4">
-          <h4 class="font-bold">Liam Brooks</h4>
-          <div class="flex text-yellow-400">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-        </div>
-      </div>
-      <p class="text-gray-600 italic">"Every destination felt like a dream. The team really knows how to deliver."</p>
-      <div class="mt-4 text-sm text-gray-500">
-        <i class="fas fa-map-marker-alt mr-2"></i> Paris, France
-      </div>
+    <div class="flex justify-center">
+      <p class="mt-4 text-sm text-gray-600">
+        Don't have an account?
+        <a href="register.html" class="text-blue-600 hover:underline font-medium">Register</a>
+      </p>
     </div>
-
-    <!-- 3 -->
-    <div class="p-8 testimonial-card rounded-xl hover:transition duration-300 bg-gray-200">
-      <div class="flex items-center mb-4">
-        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="" class="w-16 h-16 rounded-full object-cover">
-        <div class="ml-4">
-          <h4 class="font-bold">Priya Mehta</h4>
-          <div class="flex text-yellow-400">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-        </div>
-      </div>
-      <p class="text-gray-600 italic">"Wanderlust gave us the most authentic cultural experience ever!"</p>
-      <div class="mt-4 text-sm text-gray-500">
-        <i class="fas fa-map-marker-alt mr-2"></i> Kyoto, Japan
-      </div>
-    </div>
-
-    <!-- 4 -->
-    <div class="p-8 testimonial-card rounded-xl hover:transition duration-300 bg-gray-200">
-      <div class="flex items-center mb-4">
-        <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="" class="w-16 h-16 rounded-full object-cover">
-        <div class="ml-4">
-          <h4 class="font-bold">Arjun Patel</h4>
-          <div class="flex text-yellow-400">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-        </div>
-      </div>
-      <p class="text-gray-600 italic">"From airport pickup to safari rides, everything was flawless."</p>
-      <div class="mt-4 text-sm text-gray-500">
-        <i class="fas fa-map-marker-alt mr-2"></i> Nairobi, Kenya
-      </div>
-    </div>
-
-    <!-- 5 -->
-    <div class="p-8 testimonial-card rounded-xl hover:transition duration-300 bg-gray-200">
-      <div class="flex items-center mb-4">
-        <img src="https://randomuser.me/api/portraits/women/85.jpg" alt="" class="w-16 h-16 rounded-full object-cover">
-        <div class="ml-4">
-          <h4 class="font-bold">Isabella Torres</h4>
-          <div class="flex text-yellow-400">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-        </div>
-      </div>
-      <p class="text-gray-600 italic">"The guides were fantastic and truly passionate about their culture."</p>
-      <div class="mt-4 text-sm text-gray-500">
-        <i class="fas fa-map-marker-alt mr-2"></i> Lima, Peru
-      </div>
-    </div>
-
-    <!-- 6 -->
-    <div class="p-8 testimonial-card rounded-xl hover:transition duration-300 bg-gray-200">
-      <div class="flex items-center mb-4">
-        <img src="https://randomuser.me/api/portraits/men/77.jpg" alt="" class="w-16 h-16 rounded-full object-cover">
-        <div class="ml-4">
-          <h4 class="font-bold">Daniel Park</h4>
-          <div class="flex text-yellow-400">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-        </div>
-      </div>
-      <p class="text-gray-600 italic">"Luxury, adventure, and peace — all in one trip."</p>
-      <div class="mt-4 text-sm text-gray-500">
-        <i class="fas fa-map-marker-alt mr-2"></i> Bali, Indonesia
-      </div>
-    </div>
-
-    <!-- 7 -->
-    <div class="p-8 testimonial-card rounded-xl hover:transition duration-300 bg-gray-200">
-      <div class="flex items-center mb-4">
-        <img src="https://randomuser.me/api/portraits/women/39.jpg" alt="" class="w-16 h-16 rounded-full object-cover">
-        <div class="ml-4">
-          <h4 class="font-bold">Noor Al-Fayed</h4>
-          <div class="flex text-yellow-400">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-        </div>
-      </div>
-      <p class="text-gray-600 italic">"I finally felt safe and pampered while traveling solo."</p>
-      <div class="mt-4 text-sm text-gray-500">
-        <i class="fas fa-map-marker-alt mr-2"></i> Istanbul, Turkey
-      </div>
-    </div>
-
-    <!-- 8 -->
-    <div class="p-8 testimonial-card rounded-xl hover:transition duration-300 bg-gray-200">
-      <div class="flex items-center mb-4">
-        <img src="https://randomuser.me/api/portraits/men/88.jpg" alt="" class="w-16 h-16 rounded-full object-cover">
-        <div class="ml-4">
-          <h4 class="font-bold">Carlos Mendoza</h4>
-          <div class="flex text-yellow-400">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-        </div>
-      </div>
-      <p class="text-gray-600 italic">"This was my honeymoon trip, and it couldn’t have been more magical."</p>
-      <div class="mt-4 text-sm text-gray-500">
-        <i class="fas fa-map-marker-alt mr-2"></i> Santorini, Greece
-      </div>
-    </div>
-
-  </section>
-
-  <!-- VIP Testimonial Section -->
-  <section class="bg-indigo-100 py-16">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col-reverse md:flex-row items-center gap-10">
-      <!-- Text -->
-      <div class="md:w-1/2">
-        <h3 class="text-4xl font-bold text-indigo-800 mb-4">🌟 What Our VIP Says</h3>
-        <p class="text-lg text-gray-700 mb-6 italic">
-          “Wanderlust isn’t just a travel agency — they create luxury journeys that touch your soul. From a private jet tour over the Alps to a candlelit dinner in Santorini, every moment was personalized.”
-        </p>
-        <h4 class="font-semibold text-xl text-indigo-900">Amelia Hart</h4>
-        <p class="text-gray-600 text-sm">Luxury Influencer | 2.1M Followers</p>
-      </div>
-
-      <!-- Image -->
-      <div class="md:w-1/2">
-        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=600&q=80"
-             alt=""
-             class="rounded-2xl shadow-lg w-full max-w-md mx-auto">
-      </div>
-    </div>
-  </section>
+  </div>
 
 </body>
+
 </html>
